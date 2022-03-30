@@ -1,0 +1,627 @@
+:root{
+  /*=~=~=~=~=~ COLORS =~=~=~=~=~*/
+   --blue: #5390D9;
+   --dark-blue: #023047;
+   --dark-pink: #C9184A;
+   --gray: #CED4DA;
+   --white: #FFFFFC;
+  
+
+  --header-height: 3.5rem;
+  
+  /*=~=~=~=~= Z-INDEX =~=~=~=~=~*/
+
+  --z-fixed: 100;
+}
+
+/*=~=~=~=~=~ RESET =~=~=~=~=~*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: var(--dark-blue);
+  font-family: 'Poppins', sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+/*=~=~=~=~=~ REUSABLES =~=~=~=~=~=*/
+.section{
+  padding: 30px;
+}
+
+.title{
+  text-align: center;
+  color: var(--white);
+  margin-top: 3.5rem;
+}
+
+.logo i,.logo-footer i{
+  color: var(--dark-pink);
+}
+
+/*=~=~=~=~=~ HEADER =~=~=~=~=~*/
+.header{
+  width: 100%;
+  position: fixed;
+  background: var(--dark-blue);
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: .4s;
+}
+
+/*=~=~=~=~=~ NAVGATION =~=~=~=~=~*/
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav__toggle{
+  display: inline-flex;
+  font-size: 1.45rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px){
+  .nav__menu{
+    position: fixed;
+    background: var(--dark-blue);
+    top: 0;
+    right: -100%;
+    width: 100%;
+    padding: 14rem 0;
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: 0 1px 4px hsla(0,4%,15%,.1);
+    transition: .4s;
+  }
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+
+.nav__close {
+  font-size: 2rem;
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav__item a{
+  transition: .5s;
+}
+
+.nav__item a:hover{
+  color: var(--gray);
+}
+
+/* Show menu */
+.show-menu {
+  right: 0;
+}
+
+/*=~=~=~=~=~ HOME =~=~=~=~=~*/
+.home{
+  margin-top: 4.5rem;
+}
+
+.title-home{
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.span-home{
+  color: var(--blue);
+  font-size: 25px;
+}
+
+.subtext-home{
+  color: var(--gray);
+}
+
+.btn-home{
+  padding: 10px 30px;
+  margin-top: 2.5rem;
+  border: none;
+  background: #FF4D6D;
+  color: var(--white);
+  transition: .5s;
+}
+
+.btn-home:hover{
+  background: var(--dark-pink);
+}
+
+.img-home{
+  width: 220px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+}
+
+.card-home{
+  width: 220px;
+  height: 135px;
+  padding: 25px;
+  border-radius: .5rem;
+  position: absolute;
+  margin-top: -4.5rem;
+  margin-left: 2.5rem;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+}
+
+.info-card{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+  color: var(--white);
+}
+
+.price{
+  color: var(--white);
+}
+
+.current{
+  font-size: 10px;
+  color: var(--gray);
+}
+
+.price i{
+  display: flex;
+  margin-left: 7.5rem;
+  margin-top: -1.5rem;
+  color: var(--dark-pink);
+}
+
+.price i p{
+  color: var(--white);
+}
+
+.btn-card-home{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  padding: 3px 40px;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.btn-card-home:hover{
+  background: #0077B6;
+}
+/*=~=~=~=~=~ ABOUT =~=~=~=~=~*/
+.subtitle-about{
+  color: var(--gray);
+}
+
+.card-about{
+  width: 310px;
+  height: 185px;
+  display: flex;
+  margin-top: 5rem;
+  border-radius: .5rem;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+}
+
+.info-about{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: .5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.img-about{
+  width: 150px;
+}
+
+.info-about h1{
+  color: var(--white);
+  font-size: 18px;
+}
+
+.info-about h1 span{
+  color: var(--gray);
+  font-size: 8px;
+}
+
+/*=~=~=~=~=~ BENEFITS =~=~=~=~=~*/
+.cards-benefits{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-benefits{
+  width: 170px;
+  height: 230px;
+  text-align: center;
+  border-radius: .5rem;
+  background-color: rgba(255, 255, 255, .15);  
+ backdrop-filter: blur(5px);
+ margin-top: 3rem;
+ color: var(--white);
+ margin-bottom: 3.5rem;
+ transition: .5s;
+}
+
+.card-benefits:hover{
+  transform: translateY(-40px);
+}
+
+.img-card-benefit{
+  margin-top: -2.5rem;
+}
+
+.title-card-benefits{
+  font-size: 15px;
+  margin-bottom: .5rem;
+}
+
+.description-benefit{
+  font-size: 12px;
+}
+
+/*=~=~=~=~=~ COLLECTION =~=~=~=~=~*/
+.circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  background: #98C1D9;
+  clip-path: circle(110px at right 210px);
+  margin-top: 173rem;
+  margin-left: 9rem;
+}
+
+.card-collection{
+  width: 350px;
+  height: 200px;
+  border-radius: .5rem;
+  font-size: 14px;
+  color: var(--white);
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+  margin-top: 24rem;
+  text-align: center;
+}
+
+.pokemon-collection{
+  width: 190px;
+  margin-left: 5.5rem;
+  margin-top: 3rem;
+  position: absolute;
+}
+
+.img-collection-card{
+  width: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2.5rem;
+}
+
+.name-collection{
+  margin-top: 2.5rem;
+}
+
+/*=~=~=~=~=~ FOOTER =~=~=~=~=*/
+.footer{
+  border-top: 1px solid var(--white);
+  margin-top: 3.5rem;
+  padding: 20px;
+}
+
+.box-footer{
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+}
+
+.logo-footer{
+  font-size: 12px;
+}
+
+.description-logo{
+  margin-top: .5rem;
+  color: var(--gray);
+  font-size: 10px;
+}
+
+.titles{
+  font-size: 12px;
+  color: var(--white);
+}
+
+.information{
+  color: var(--gray);
+  font-size: 10px;
+  margin-top: .5rem;
+}
+
+.information li{
+  margin-bottom: .5rem;
+}
+
+.s{
+  display: flex;
+  gap: .5rem;
+  margin-top: 1.5rem;
+}
+
+.social{
+  transition: .5s;
+}
+
+.social:hover{
+  color: var(--blue);
+}
+
+/*=~=~=~=~=~ RESPONSIVE =~=~=~=~=~*/
+@media screen and (min-width: 767px){
+ .title{
+   font-size: 35px;
+ }
+  /*=~=~=~=~=~ NAVGATION =~=~=~=~=~*/
+.nav {
+    height: calc(var(--header-height) + 1.5rem);
+    column-gap: 3rem;
+  }
+  
+  .logo{
+    font-size: 26px;
+  }
+  
+  .nav__toggle, 
+  .nav__close{
+    display: none;
+  }
+  
+  .nav__menu {
+    margin-left: auto;
+  }
+  
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3rem;
+    font-size: 22px;
+  }
+  
+  /*=~=~=~=~=~ HOME =~=~=~=~=~*/
+  .home{
+    height: 35vh;
+  }
+  
+  .container-home{
+    display: flex;
+    margin-top: 2.5rem;
+  }
+  
+  .title-home{
+    font-size: 40px;
+  }
+  
+  .subtext-home{
+    font-size: 19px;
+  }
+  
+  .span-home{
+    font-size: 50px;
+  }
+  
+  .btn-home{
+    padding: 15px 65px;
+    font-size: 26px;
+  }
+  
+  .img-home{
+    width: 400px;
+    margin-left: 1.5rem;
+    margin-top: -1.5rem;
+    position: relative;
+  }
+  
+  .card-home{
+    width: 380px;
+    height: 230px;
+    padding: 25px;
+    border-radius: .5rem;
+    position: absolute;
+    margin-top: -8.5rem;
+    margin-left: 2.5rem;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+  }
+  
+  .info-card{
+    display: flex;
+    font-size: 30px;
+  }
+  
+  .current{
+    font-size: 18px;
+  }
+  
+  .price{
+    font-size: 30px;
+  }
+  
+  .price i{
+    display: flex;
+    margin-left: 14rem;
+    margin-top: -2.5rem;
+  }
+  
+  .price i p{
+    color: var(--white);
+  }
+  
+  .btn-card-home{
+    margin-top: 2rem;
+    padding: 10px 60px;
+    font-size: 22px;
+  }
+  
+  /*=~=~=~=~=~ ABOUT =~=~=~=~=~*/
+  .container-about{
+    display: flex;
+  }
+  
+  .subtitle-about{
+    color: var(--gray);
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+    font-size: 26px;
+  }
+  
+  .imab{
+    width: 350px;
+  }
+  
+  .card-about{
+    width: 900px;
+    height: 350px;
+    
+  }
+  
+  .info-about{
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-left: 2.5rem;
+  }
+  
+  .info-about h1{
+    font-size: 40px;
+  }
+  
+  .info-about h1 span{
+    font-size: 20px;
+  }
+  
+  .img-about{
+    width: 300px;
+  }
+  
+  /*=~=~=~=~=~ BENEFITS =~=~=~=~=~*/
+  .cards-benefits{
+    flex-direction: row;
+    justify-content: center;
+    gap: 3.5rem;
+    margin-top: .5rem;
+  }
+  
+  .card-benefits{
+    width: 230px;
+    height: 305px;
+  }
+  
+  .title-card-benefits{
+    font-size: 20px;
+  }
+  
+  .description-benefit{
+    font-size: 18px;
+  }
+  
+  /*=~=~=~=~=~ COLLECTION =~=~=~=~=*/
+  .circle{
+    width: 80%;
+    height: 80%;
+    clip-path: circle(170px at right 290px);
+    margin-top: 143rem;
+    margin-left: 13rem;
+  }
+  
+  .pokemon-collection{
+    width: 350px;
+    margin-left: 35rem;
+  }
+  
+  .cards-collection{
+    margin-top: 12rem;
+  }
+  
+  .card-collection{
+    height: 260px;
+  }
+  
+  .img-collection-card{
+    width: 200px;
+  }
+  
+  .name-collection{
+    margin-top: 1.5rem;
+  }
+  
+  /*=~=~=~=~=~ FOOTER =~=~=~=~=~=*/
+  .footer{
+    padding: 40px;
+  }
+  
+ .titles{
+  font-size: 23px;
+  color: var(--white);
+  margin-bottom: 2.5rem;
+  }
+  
+  .box-footer{
+   grid-template-columns: 3fr 1.5fr 1fr;
+  }
+  
+  .logo-footer{
+    font-size: 25px;
+  }
+  
+  .description-logo{
+    margin-top: 2.5rem;
+    color: var(--gray);
+    font-size: 22px;
+  }
+  
+  .information{
+    font-size: 30px;
+  }
+  
+  .social i{
+    font-size: 45px;
+    gap: 7rem;
+    
+  }
+}
+  

@@ -1,7 +1,7 @@
 # NFPokemon
 
 ## 📒 Informações sobre o projeto 
-  ● O projeto foi desenvolvido com o intuito de colocar alguns conhecidos 
+  ● O projeto foi desenvolvido com o intuito de colocar alguns conhecimentos 
     adquiridos em pratica
 
 ## 💻 Tecnologias usadas 

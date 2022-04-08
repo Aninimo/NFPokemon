@@ -1,8 +1,8 @@
 # NFPokemon
 
 ## 📒 Informações sobre o projeto 
-  ● O projeto foi desenvolvido com o intuito de colocar alguns conhecimentos 
-    adquiridos em pratica
+  ● Web site criado com o intuito de colocar alguns conhecimentos 
+    adquiridos em prática.
 
 ## 💻 Tecnologias usadas 
     ● HTML

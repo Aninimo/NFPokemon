@@ -3,6 +3,9 @@
 ## 📒 Informações sobre o projeto 
   ● Web site criado com o intuito de colocar alguns conhecimentos 
     adquiridos em prática.
+    
+## 🔗 Link
+<a href='https://aninimo.github.io/NFPokemon/'>NFT Pokémon</a>
 
 ## 💻 Tecnologias usadas 
     ● HTML
